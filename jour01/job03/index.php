@@ -3,8 +3,6 @@ $boolean= true;
 $int= 5;
 $string= 'Hello LaPlateforme!';
 $float= 2.5;
-$tableau = [type, nom, valeur]
-
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +14,31 @@ $tableau = [type, nom, valeur]
     <title>Jour01 - job03</title>
 </head>
 <body>
-    <?php <p>echo $tableau</p>
-    ?>
-</body>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Nom</th>
+            <th>Valeur</th>
+        </tr>
+        <tr>
+            <td>Boolean</td>
+            <td>boolean</td>
+            <td><?php echo $boolean ?></td>
+        </tr>
+        <tr>
+            <td>Integer</td>
+            <td>int</td>
+            <td><?= $int ?></td>
+        </tr>
+        <tr>
+            <td>String</td>
+            <td>string</td>
+            <td><?= $string ?></td>
+        </tr>
+        <tr>
+            <td>Float</td>
+            <td>float</td>
+            <td><?php echo $float ?></td>
+        </tr>
+    </table>
 </html>

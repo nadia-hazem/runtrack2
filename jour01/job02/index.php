@@ -1,7 +1,3 @@
-<?php 
-$_premier= 'Hello LaPlateforme! ceci est le premier exercice';
-$_second= 'Hello LaPlateforme! ceci est le deuxieme exercice';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +7,8 @@ $_second= 'Hello LaPlateforme! ceci est le deuxieme exercice';
     <title>Jour01 - job02</title>
 </head>
 <body>
-    <?php echo $_premier ?>
+    <?php echo 'Hello LaPlateforme!' /*** premier commentaire ***/ ?>
     <br>
-    <?php echo $_second ?>
+    <?php echo 'Hello LaPlateforme!' /*** second commentaire ***/ ?>
 </body>
 </html>
