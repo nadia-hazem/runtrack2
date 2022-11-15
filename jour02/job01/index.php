@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jour02 Job01</title>
 </head>
 <body>
-<p>Afficher tous les nombres compris entre 0 et 1337 en mettant un retour à la ligne entre
+<!--Afficher tous les nombres compris entre 0 et 1337 en mettant un retour à la ligne entre
 chaque nombre (<br />).
-Le nombre 42 doit être en gras et souligné.</p>
+Le nombre 42 doit être en gras et souligné.-->
+
     <?php
     for ($i = 0; $i <= 1337; $i++) {
         if ($i === 42) {
