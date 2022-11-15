@@ -1,7 +1,7 @@
 <?php
-$boolean= true;
+$bool= true;
 $int= 5;
-$string= 'Hello LaPlateforme!';
+$str= 'Hello LaPlateforme!';
 $float= 2.5;
 ?>
 
@@ -21,22 +21,22 @@ $float= 2.5;
             <th>Valeur</th>
         </tr>
         <tr>
-            <td>Boolean</td>
+            <td><?= gettype($bool)?></td>
             <td>boolean</td>
             <td><?php echo $boolean ?></td>
         </tr>
         <tr>
-            <td>Integer</td>
+            <td><?= gettype($int)?></td>
             <td>int</td>
             <td><?= $int ?></td>
         </tr>
         <tr>
-            <td>String</td>
+            <td><?= gettype($str)?></td>
             <td>string</td>
             <td><?= $string ?></td>
         </tr>
         <tr>
-            <td>Float</td>
+            <td><?= gettype($float)?></td>
             <td>float</td>
             <td><?php echo $float ?></td>
         </tr>
