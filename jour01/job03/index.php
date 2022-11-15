@@ -22,8 +22,8 @@ $float= 2.5;
         </tr>
         <tr>
             <td><?= gettype($bool)?></td>
-            <td>boolean</td>
-            <td><?php echo $boolean ?></td>
+            <td>bool</td>
+            <td><?php echo $bool ?></td>
         </tr>
         <tr>
             <td><?= gettype($int)?></td>
@@ -32,8 +32,8 @@ $float= 2.5;
         </tr>
         <tr>
             <td><?= gettype($str)?></td>
-            <td>string</td>
-            <td><?= $string ?></td>
+            <td>str</td>
+            <td><?= $str ?></td>
         </tr>
         <tr>
             <td><?= gettype($float)?></td>
