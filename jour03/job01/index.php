@@ -7,7 +7,7 @@
     <title>Jour03 Job01</title>
 </head>
 <body>
-    <h1>Les Tableaux</h1>
+    <h1>Les Tableaux Job01</h1>
     <!--Créez un tableau contenant les nombres 200, 204, 173, 98, 171, 404, 459.
 Parcourez ce tableau et affichez pour chaque nombre “X est paire<br />” ou “X est
 impaire<br />”, sur votre page index.php. X prenant tour à tour chacune des valeurs
@@ -24,7 +24,7 @@ comprises dans ce tableau.-->
             echo "$value est impair<br />";
         }
     }
-    
+
     ?>
 
 </body>
