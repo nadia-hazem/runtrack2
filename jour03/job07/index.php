@@ -16,7 +16,7 @@ Ex. : Ertaines choses changent, et d'autres ne changeront jamais.c-->
     <h1>Les Tableaux Job07</h1>
 
     <?php
-        echo "Certaines choses changent, et d'autres ne changeront jamais.<br>";
+        echo "Certaines choses changent, et d'autres ne changeront jamais.<br><br>";
 
         $str="Certaines choses changent, et d'autres ne changeront jamais.";
         for ($i = 1; isset($str[$i]); $i++) {

@@ -14,7 +14,7 @@ Ex. : redessop suon rap tnessinif edessop no'l euq sesohc seL-->
     <h1>Les Tableaux Job06</h1>
 
 <?php
-    echo 'Les choses que l\'on possède finissent par nous posséder.<br>';
+    echo 'Les choses que l\'on possède finissent par nous posséder.<br><br>';
 
     $str="Les choses que l'on possède finissent par nous posséder.";
     $count = 0;

@@ -24,18 +24,7 @@ comprises dans ce tableau.-->
             echo "$value est impair<br />";
         }
     }
-//==============================================
 
-    echo '<br><h3>Autre script</h3>';
-
-    for ($i = 0; isset($tableau[$i]); $i++) {
-        if ($tableau[$i] % 2 == 0) {
-            echo "$tableau[$i] est paire<br />";
-        }
-        else {
-            echo "$tableau[$i] est impair<br />";
-        }
-}
     ?>
 
 </body>
