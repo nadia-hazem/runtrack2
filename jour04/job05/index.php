@@ -7,12 +7,15 @@
     <title>Jour04 job05</title>
 </head>
 <body>
+
 <!--Faire un formulaire de connexion de type POST (se demander, pourquoi pas GET ?)
 ayant deux champs <input> nommés username et password.
 Après validation du formulaire :
 ● si le username est “John” ET le password est “Rambo” afficher :
 “C’est pas ma guerre”
 ● sinon afficher : “Votre pire cauchemar”.-->
+
+    <h1>Jour04 job05</h1>
     
     <form action="" method="POST">
         <table>
