@@ -36,7 +36,7 @@ champs <input> de type “text” et un <input> de type “submit” pour l’en
         </table>
 
     </form>
-
+<br><br>
     <table border : 1>
 
         <?php

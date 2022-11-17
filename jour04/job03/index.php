@@ -28,7 +28,7 @@ Vous pouvez ensuite afficher avec echo directement dans votre page par exemple :
     
         echo "<br>Le nombre d'argument POST envoyé est : " .$count;
 ?>
-
+<br><br>
     <form action="" method="post">
         <table>
             <tr>
