@@ -19,10 +19,10 @@ Après validation du formulaire :
         <table>
             <tr>
                 <td>Nombre</td>
-                <td><input type="text" name="nombre"></td>
+                <td><input type="nombre" name="nombre"></td>
             </tr>
             <tr>
-                <td><input type="submit" value="Send"></td>
+                <td><input type="submit" value="Valider"></td>
             </tr>
         </table>
 
