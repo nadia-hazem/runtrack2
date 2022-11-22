@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(211, 234, 239);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 30px;
+    color: #7D7D7D;
+    margin: 0;
+    padding: 0;
+}
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    width: 40%;
+    margin: auto;
+    padding: 0;
+    border: 1px solid blue;
+}
