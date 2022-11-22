@@ -32,7 +32,7 @@ function gras($str) {
         }
 
     }
-    for ($k = 0; isset($maj[$k]); $k++) { //pour le dernier mot
+    for ($k = 0; isset($maj[$k]); $k++) { //pour lire le dernier mot
         if ($mot[0] == $maj[$k]) {
             echo "<b>$mot</b>";
             $mot = "";
@@ -47,8 +47,61 @@ function gras($str) {
         }
     } 
 }
-
-
+$decalage = 2;
+function cesar($str, $decalage) {
+    $min = "abcdefghijklmnopqrstuvwxyz";
+    $maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for ($i = 0; isset($str[$i]); $i++) {
+        for ($j = 0; isset($min[$j]); $j++) {
+            if ($str[$i] == $min[$j]) {
+                $str[$i] = $min[($j + $decalage) % 26];
+                break;
+            }
+            else if ($str[$i] == $maj[$j]) {
+                $str[$i] = $maj[($j + $decalage) % 26];
+                break;
+            }
+        }
+    }
+    return $str;
+}
+function plateforme($str) {
+    $mot = "";
+    $j = 0;
+    for ($i = 0; isset($str[$i]); $i++) {
+        if ( $str[$i] == " ") {
+            $mot[$j] = $str[$i];
+            if ($mot[$j-1] == "e" && $mot[$j-2] == "m") {
+                $mot[$j] = "_";
+                $mot[$j+1] = " ";
+                echo $mot;
+                $mot = "";
+                $j = 0;
+            }
+            else {
+                echo $mot;
+                $mot = "";
+                $j = 0;
+            }
+        } 
+        else {
+            $mot[$j] = $str[$i];
+            $j++;
+        }
+    }
+    if ($mot[$j-1] == "e" && $mot[$j-2] == "m") {
+        $mot[$j] = "_";
+        $mot[$j+1] = " ";
+        echo $mot;
+        $mot = "";
+        $j = 0;
+    }
+    else {
+        echo $mot;
+        $mot = "";
+        $j = 0;
+    }
+} 
     
 ?>
 <html lang="en">
@@ -60,7 +113,7 @@ function gras($str) {
 </head>
 <body>
     <div>
-        <form action="" method="post">
+        <form action="" method="get">
             <input type="text" name="str" placeholder="Ceci est une phrase à sens unique. Et, elle ne va nulle part">
             <SELECT name="fonction" size="1">
             <option selected="selected">Selectionnez une fonction</option>
@@ -72,14 +125,17 @@ function gras($str) {
     </div>
     <?php 
         
-    if (isset($_POST ['fonction']) && isset($_POST ['str'])) {
-        $choice = $_POST['fonction'];
-        $str = $_POST['str'];
+    if (isset($_GET ["fonction"]) && isset($_GET ["str"])) {
+        $choice = $_GET["fonction"];
+        $str = $_GET["str"];
         if ($choice == "gras") {
             gras($str);
         }
         else if ($choice == "cesar") {
-            cesar($str, $decalage);
+            echo $str;
+            echo "<br>";
+            echo cesar($str, $decalage);
+
         }
         else if ($choice == "plateforme") {
             plateforme($str);
