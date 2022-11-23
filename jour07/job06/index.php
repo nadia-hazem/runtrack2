@@ -12,7 +12,6 @@
         }
         return $str;
     }
-
 ?>
 <html lang="en">
 <head>
@@ -20,13 +19,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jour07 job06 - leetSpeak</title>
+    <style type="text/css">
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <?php
-        $str = "Les chaussettes de l'archi-duchesse sont-elles seches archi-seches ?";
+    <div class="box">
+        <form>
+            <div class="row">
+                <label for="sentence">Saisir une phrase</label><br>
+                <input type="text" name="str"><br>
+                <input type="submit" value="Valider">
+            </div>
+        </form>
+        <?php
+        $str = $_GET["str"];
         $result = leetSpeak($str);
         echo $result;
-
-    ?>
+        ?>
+    </div>
 </body>
 </html>
+

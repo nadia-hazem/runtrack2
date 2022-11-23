@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-
 $jour = true;
 function bonjour($jour) {
 
@@ -9,9 +8,7 @@ function bonjour($jour) {
     } else {
         echo "Bonsoir !";
     }
-
 }
-
 ?>
 
 <html lang="en">
@@ -22,6 +19,6 @@ function bonjour($jour) {
     <title>Jour07 Job 02 - Jour/Nuit</title>
 </head>
 <body>
-<?= bonjour($jour); ?>
+    <h1><?= bonjour($jour); ?></h1>
 </body>
 </html>

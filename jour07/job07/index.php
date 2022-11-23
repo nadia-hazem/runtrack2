@@ -3,7 +3,6 @@
 
 function gras($str) {
     $maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
     $j = 0;
     $mot = "";
     echo $str;

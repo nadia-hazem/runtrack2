@@ -3,7 +3,6 @@
 function hello() {
     echo "Hello LaPlateforme!";
 }
-
 ?>
 <html lang="en">
 <head>
@@ -13,6 +12,6 @@ function hello() {
     <title>Jour07 Job 01 - Hello LaPlateforme</title>
 </head>
 <body>
-    <?= hello() ?>
+    <h1 ><?= hello() ?></h1>
 </body>
 </html>
