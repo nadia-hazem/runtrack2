@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jour08 job03</title>
 </head>
 <body>
     <!--Créez un formulaire qui contient un input de type de text nommé “prenom” et un bouton
