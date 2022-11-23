@@ -18,18 +18,14 @@
 </head>
 <body>
 <?php
-
+    if (isset($_POST['reset'])) {
+        $_SESSION['nbvisites'] = 1;
+    }
     echo "Vous avez visité cette page " . $_SESSION["nbvisites"] . " fois.";
 ?>
     <form action="" method="post">
         <input type="submit" name="reset" value="reset">
     </form>
-
-<?php
-    if (isset($_POST['reset'])) {
-        $_SESSION['nbvisites'] = 0;
-    }
-?>
 
 </body>
 </html>
