@@ -3,4 +3,4 @@ l'étage ayant la salle avec la plus grande capacité (et afficher aussi le nom 
 ainsi que sa capacité).
 Dans ce résultat, la colonne “nom” de la salle doit être renommée en “Biggest Room”*/
 
-SELECT `etages`.`nom` AS `nom_etage`, `salles`.`nom` AS `Biggest Room`, `salles`.`capacite` AS `capacite_salle` FROM `salles` INNER JOIN `etages` ON `salles`.`etage_id` = `etages`.`id` WHERE `salles`.`capacite` = (SELECT MAX(`capacite`) FROM `salles`)
+SELECT `etage`.`nom` AS `nom_etage`, `salles`.`nom` AS `Biggest Room`, `salles`.`capacite` AS `capacite_salle` FROM `salles` INNER JOIN `etage` ON `salles`.`id_etage` = `etage`.`id` WHERE `salles`.`capacite` = (SELECT MAX(`capacite`) FROM `salles`);
