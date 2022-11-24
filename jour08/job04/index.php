@@ -17,6 +17,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jour08 job04</title>
+    <style>
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 20%;
+            height: 30%;
+            margin: 10% auto;
+            color: #7D7D7D;
+            border-radius: 10px;
+            padding: 5%;
+            background: aliceblue;
+        } 
+    </style>
 </head>
 <body>
     <!--Créez un formulaire de connexion qui contient un input de type de text nommé
@@ -26,21 +42,24 @@ plus le formulaire de connexion. A la place, écrivez “Bonjour prenom !” et 
 bouton “Déconnexion” nommé “deco”. Lorsque l’utilisateur se déconnecte, il faut à
 nouveau afficher le formulaire de connexion.-->
 
+    <div class="center">
 
+        <?php
+        if (isset($_COOKIE['prenom'])) {
+            echo "Bonjour " . $_COOKIE['prenom'] . " !";
+            echo '<br><br>';
+            echo "<form method='post'>
+            <form method='post'>
+                <input type='submit' name='deco' value='Déconnexion'>
+            </form>";
+        } else {
 
-    <?php
-    if (isset($_COOKIE['prenom'])) {
-        echo "Bonjour " . $_COOKIE['prenom'] . " !";
-        echo "<form action='' method='post'>
-        <input type='submit' name='deco' value='Se déconnecter'>
-        </form>";
-    } else {
-
-        echo "<form action='' method='post'>
-        <input type='text' name='prenom'>
-        <input type='submit' name='connexion' value='connexion'>
-        </form>";
-    }
-    ?>
+            echo "<form action='' method='post'>
+            <input type='text' name='prenom'>
+            <input type='submit' name='connexion' value='connexion'>
+            </form>";
+        }
+        ?>
+    </div>
 </body>
 </html>

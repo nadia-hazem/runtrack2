@@ -8,6 +8,22 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jour08 job03</title>
+    <style>
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 20%;
+            height: 30%;
+            margin: 10% auto;
+            color: #7D7D7D;
+            border-radius: 10px;
+            padding: 5%;
+            background: aliceblue;
+        } 
+    </style>
 </head>
 <body>
     <!--Créez un formulaire qui contient un input de type de text nommé “prenom” et un bouton
@@ -16,7 +32,7 @@ session. Afficher l’ensemble des prénoms.
 Ajoutez un bouton nommé “reset” qui permet de réinitialiser la liste.-->
 </body>
 
-    <div>
+    <div class="center">
         <form action="" method="post">
             <input type="text" name="prenom">
             <input type="submit" name="submit" value="Valider">
@@ -28,6 +44,7 @@ Ajoutez un bouton nommé “reset” qui permet de réinitialiser la liste.-->
             //On récupère les valeurs entrées par l'utilisateur :
             $_SESSION['prenom'] [] = $_POST['prenom'];
         } else {
+            echo "<br><br>";
             echo "Veuillez saisir un prénom";
         }
 
