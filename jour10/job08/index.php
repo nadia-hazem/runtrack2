@@ -2,7 +2,7 @@
 
 $mysqli = new mysqli("localhost", "root", "", "jour09");
 
-$request = $mysqli->query("select  sum(`capacite`) from `salles`;");
+$request = $mysqli->query("select sum(`capacite`) from `salles`;");
 
 ?>
 
@@ -41,6 +41,7 @@ les données présentes dans votre base de données.-->
                         echo "<td>".$resultat["sum(`capacite`)"]."</td>";
                         echo "</tr>";
                     }
+
                 ?>
             </tbody>
         </table>

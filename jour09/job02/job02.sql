@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 24 nov. 2022 à 10:41
+-- Généré le : ven. 25 nov. 2022 à 10:12
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -20,29 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `jour09`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `etage`
---
-
-DROP TABLE IF EXISTS `etage`;
-CREATE TABLE IF NOT EXISTS `etage` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `numero` int(11) NOT NULL,
-  `superficie` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `etage`
---
-
-INSERT INTO `etage` (`id`, `nom`, `numero`, `superficie`) VALUES
-(1, 'RDC', 0, 500),
-(2, 'R+1', 1, 500);
 
 -- --------------------------------------------------------
 
@@ -69,40 +46,10 @@ INSERT INTO `etudiants` (`id`, `prenom`, `nom`, `naissance`, `sexe`, `email`) VA
 (1, 'Cyril', 'Zimmermann', '1989-01-02', 'Homme', 'cyril@laplateforme.io'),
 (2, 'Jessica', 'Soriano', '1995-09-08', 'Femme', 'jessica@laplateforme.io'),
 (3, 'Roxan', 'Roumégas', '2016-09-08', 'Homme', 'roxan@laplateforme.io'),
-(4, 'Jessica', 'Soriano', '1995-09-08', 'Femme', 'jessica@laplateforme.io'),
-(5, 'Roxan', 'Roumégas', '2016-09-08', 'Homme', 'roxan@laplateforme.io'),
 (6, 'Pascal', 'Assens', '1999-12-31', 'Homme', 'pascal@laplateforme.io'),
 (7, 'Terry', 'Cristinelli', '2005-02-01', 'Homme', 'terry@laplateforme.io'),
 (8, 'Ruben', 'Habib', '1993-05-26', 'Homme', 'ruben.habib@laplateforme.io'),
 (9, 'Toto', 'Dupont', '2019-11-07', 'Homme', 'toto@laplateforme.io');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `salles`
---
-
-DROP TABLE IF EXISTS `salles`;
-CREATE TABLE IF NOT EXISTS `salles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `id_etage` int(11) NOT NULL,
-  `capacite` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `salles`
---
-
-INSERT INTO `salles` (`id`, `nom`, `id_etage`, `capacite`) VALUES
-(1, 'Lounge', 1, 100),
-(2, 'Lounge', 1, 100),
-(3, 'Studio Son', 1, 5),
-(4, 'Broadcasting', 2, 50),
-(5, 'Bocal Peda', 2, 4),
-(6, 'Coworking', 2, 80),
-(7, 'Studio Video', 2, 5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

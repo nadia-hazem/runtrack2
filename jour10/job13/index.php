@@ -2,7 +2,7 @@
 
 $mysqli = new mysqli("localhost", "root", "", "jour09");
 
-$request = $mysqli->query("select `etage`.`nom` as `nom_etage`, `salles`.`nom` as `Biggest Room`, `salles`.`capacite` as `capacite_salle` from `salles` inner join `etage` on `salles`.`id_etage` = `etage`.`id` where `salles`.`capacite` = (select max(`capacite`) from `salles`");
+$request = $mysqli->query("SELECT `salles` . `nom` , `etage` . `nom` FROM `salles` INNER JOIN `etage` ON `salles` . `id_etage` = `etage` . `id`");
 
 ?>
 
@@ -27,26 +27,24 @@ SQL, sélectionnez récupérer le nom des salles et le nom de leur étage. Affic
 résultat de cette requête dans un tableau html. La première ligne de votre tableau html
 doit contenir le nom des champs. Les suivantes doivent contenir les données présentes
 dans votre base de données.-->
-    <table>
-        <thead>
-            <tr>
-                <th>nom_etage</th>
-                <th>Biggest Room</th>
-                <th>capacite_salle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-
-                while(($resultat = $request->fetch_array()) != null){
-                    echo "<tr>";
-                    echo "<td>".$resultat["nom_etage"]."</td>";
-                    echo "<td>".$resultat["Biggest Room"]."</td>";
-                    echo "<td>".$resultat["capacite_salle"]."</td>";
-                    echo "</tr>";
-                }
-            ?>
-        </tbody>
-    </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Salle</th>
+                    <th>Etage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    while(($resultat = $request->fetch_array()) != null){
+                        echo "<tr>";
+                        echo "<td>".$resultat[0]."</td>";
+                        echo "<td>".$resultat[1]."</td>";
+                        echo "</tr>";
+                    }
+                    
+                ?>
+            </tbody>
+        </table>
 </body>
 </html>
