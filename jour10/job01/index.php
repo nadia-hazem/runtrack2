@@ -1,7 +1,6 @@
 <?php
 
 $mysqli = new mysqli("localhost", "root", "", "jour09");
-
 $request = $mysqli->query("select * from etudiants");
 
 /* $resultat = $request->fetch_array();
