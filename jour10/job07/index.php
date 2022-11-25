@@ -2,7 +2,7 @@
 
 $mysqli = new mysqli("localhost", "root", "", "jour09");
 
-$request = $mysqli->query("select  sum(`superficie`) from `etage`;");
+$request = $mysqli->query("select sum(`superficie`) from `etage`;");
 
 ?>
 
